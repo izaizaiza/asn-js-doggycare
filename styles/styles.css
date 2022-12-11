@@ -63,7 +63,7 @@ a {
     color:#000000;
 }
 
-main a:hover, footer a:hover {
+main a:hover, footer a:hover{
     text-decoration: underline;
 }
 
@@ -86,8 +86,32 @@ main a:hover, footer a:hover {
     - there will be 25px of space between the header and main, and 50px of space between main and footer.
     - the footer will be 60px tall, have a font-weight of 200, and the text within will be centered vertically and horizontally.
 */
+header{
+    background-color: #E5AF42;
+    height: 150px;
+}
 
+header img{
+    width: 100px;
+    height: 100px;
+    padding-top:25px;
+    padding-bottom: 25px;
+    padding-left:25px;
+    /* 950px - 100px + 25px = 825 px; */
+    /* HOW TO MAKE the top-level heading is centered in the remaining width?? */
+}
 
+main {
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+footer {
+    background-color: #E5AF42;
+    height:60px;
+    font-weight:200px;
+    text-align: center;
+}
 
 
 
@@ -101,9 +125,35 @@ main a:hover, footer a:hover {
     - each fake-button on this page will be 250px wide with 150px of space between them.
     - the pair of fake-buttons will be centered on the page. HINT: can calculate the required margin to make them appear to be centered.
 */
+.index {
+    
+}
 
+.index img{
+    width: 300px;
+    padding-left:25px;
+    padding-bottom: 50px;
+}
 
-
+.index .about-us{
+    /* width of the whole site:950px;*/
+    width: 550px;;
+}
+.index h2{
+    /*font-size is inherited*/
+    line-height:inherit;
+}
+.index p{
+    padding-bottom: 12px;
+}
+.index .fake-button{
+    width:250px;
+    margin-left: 75px; /*150px is split as a 75px margin for right in the first fake button and 75 to the other*/
+    margin-right:75px;
+}
+.index .flex{
+    margin-left:150px; /* (250*2) + 150 + (150 more cause we split 150)=800; 950-800=150*/
+}
 
 
 
@@ -120,11 +170,35 @@ main a:hover, footer a:hover {
     - all items within the page will be centered within their available space.
 
 */
+.booking-page{
+    flex-basis: 600px;
+    text-align: center;
+    font-size: 18px;
+}
+.booking-page .day-selectors{
+    padding-bottom: 12px;
+}
+.booking-page li{
+    margin-right: 20px;
+    width:60px;
+    border:solid #000000 1px;
+}
+.small-button{
+    padding:5px;
+    border:solid #000000 1px;
+}
+.top-margin{
+    padding-top: 24px;
+    padding-bottom: 12px;
+}
+.booking-page .fake-button{
+    margin-left: 375px; /* recall length of whole site is 950; to center "clear days",950px/2 = 475; width of 200/2 = 100; 475-100=375*/
+    width:200px;
+}
 
-
-
-
-
+.clicked{
+    background-color: #E5AF42;
+}
 
 
 
