@@ -41,11 +41,11 @@ body {
         - change the text colour to white, and 
         - change the cursor to pointer.
 */
-h1 {
+h1{
     font-size: 48px;
     text-align: center;
 }
-h2 {
+h2{
     font-size:36px;
     padding-bottom: 12px;
 }
@@ -90,7 +90,6 @@ header{
     background-color: #E5AF42;
     height: 150px;
 }
-
 header img{
     width: 100px;
     height: 100px;
@@ -125,19 +124,15 @@ footer {
     - each fake-button on this page will be 250px wide with 150px of space between them.
     - the pair of fake-buttons will be centered on the page. HINT: can calculate the required margin to make them appear to be centered.
 */
-.index {
-    
+.index .flex{
+    display: flex;
+    flex-direction: row;
 }
 
 .index img{
     width: 300px;
     padding-left:25px;
     padding-bottom: 50px;
-}
-
-.index .about-us{
-    /* width of the whole site:950px;*/
-    width: 550px;;
 }
 .index h2{
     /*font-size is inherited*/
@@ -147,12 +142,10 @@ footer {
     padding-bottom: 12px;
 }
 .index .fake-button{
-    width:250px;
-    margin-left: 75px; /*150px is split as a 75px margin for right in the first fake button and 75 to the other*/
-    margin-right:75px;
-}
-.index .flex{
-    margin-left:150px; /* (250*2) + 150 + (150 more cause we split 150)=800; 950-800=150*/
+    flex-basis:250px;
+    margin-left: 150px; 
+    height: auto;
+    padding: 30px 0px;
 }
 
 
@@ -175,7 +168,8 @@ footer {
     text-align: center;
     font-size: 18px;
 }
-.booking-page .day-selectors{
+.booking-page ul{
+    display:inline-flex;
     padding-bottom: 12px;
 }
 .booking-page li{
@@ -192,8 +186,9 @@ footer {
     padding-bottom: 12px;
 }
 .booking-page .fake-button{
-    margin-left: 375px; /* recall length of whole site is 950; to center "clear days",950px/2 = 475; width of 200/2 = 100; 475-100=375*/
+    margin-left: 375px; /* recall length of whole site is 950; to center "clear days", 950px/2 = 475px; width of 200px/2 = 100px; 475px-100px=375px*/
     width:200px;
+    padding: 20px 0px; /*added to make buttons big enough for the text*/
 }
 
 .clicked{
@@ -215,7 +210,26 @@ footer {
     - all form input, textarea, and and button elements will have the same font as the rest of the page, a line-height of 24px, a font-size of 16px, and the same border as other buttons on the site. There will be 24px of space below each of these elements.
     - the edges of the button will line up exactly with the text-area element. HINT: time for some math!
 */
+main .contact{
+    height: 420px;
+    text-align: center;
+}
 
+.form{
+    font-size: inherit;
+    display: flex;
+    flex-direction: row;
+}
+form .flex{
+    align-items: center;
+}
+.form .flex label{
+    flex-basis: 150px;
+    padding-right: 24px;
+}
+.form.flex input, .form.flex textarea{
+    flex-basis: 300px;
+}
 
 
 
