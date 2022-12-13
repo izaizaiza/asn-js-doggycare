@@ -90,8 +90,11 @@ header{
     background-color: #E5AF42;
     height: 150px;
 }
+header a{
+    display: inline-flex;
+}
 header img{
-    width: 100px;
+    flex-basis: 100px;
     height: 100px;
     padding-top:25px;
     padding-bottom: 25px;
@@ -99,12 +102,14 @@ header img{
     /* 950px - 100px + 25px = 825 px; */
     /* HOW TO MAKE the top-level heading is centered in the remaining width?? */
 }
-
+header a h1{
+    align-self: center;
+    padding-left: 108.15px;
+}
 main {
     margin-top: 25px;
     margin-bottom: 50px;
 }
-
 footer {
     background-color: #E5AF42;
     height:60px;
@@ -210,26 +215,53 @@ footer {
     - all form input, textarea, and and button elements will have the same font as the rest of the page, a line-height of 24px, a font-size of 16px, and the same border as other buttons on the site. There will be 24px of space below each of these elements.
     - the edges of the button will line up exactly with the text-area element. HINT: time for some math!
 */
-main .contact{
+main#contact-page{
     height: 420px;
     text-align: center;
 }
 
-.form{
+form{
     font-size: inherit;
-    display: flex;
-    flex-direction: row;
 }
 form .flex{
-    align-items: center;
+    display:flex;
+    justify-content: center;
 }
-.form .flex label{
+form .flex label{
     flex-basis: 150px;
+    text-align: right;
     padding-right: 24px;
+    margin-bottom: 24px;
 }
-.form.flex input, .form.flex textarea{
+form .flex input{
     flex-basis: 300px;
+    line-height: 24px;
+    font-size: 16px;
+    border:solid #000000 1px;
+    margin-bottom: 24px;
 }
+form .flex textarea{
+    height: 150px;
+    flex-basis: 300px;
+    line-height: 24px;
+    font-size: 16px;
+    border:solid #000000 1px;
+    margin-bottom: 24px;
+}
+form button{
+    /*306px is the width of textarea, and label is 174px; whole width: 950px; form is in the center; 
+    950px - (306+174) = 470, 470/2 = 235px, so 235+174 = 409px; 
+    in inspect mode, textarea has additional padding of 2 => add 2 on the width*/
+    width: 302px;
+    margin-left: 411px; /*refer to the calc afew lines above*/
+    line-height: 24px;
+    font-size: 16px;
+    border:solid #000000 1px;
+    margin-bottom: 24px;
+    padding: 20px 0px;
+}
+
+
 
 
 
