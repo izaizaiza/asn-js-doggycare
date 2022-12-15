@@ -1,3 +1,6 @@
+/* TO DO */
+// need to make it able to select two half days but can only select one day in total.
+
 /********* create variables *********/
 // useful variables might be: the cost per day, the number of days selected, and elements on the screen that will be clicked or will need to be modified. 
 // Do any of these variables need to be initialized when the page is loaded? 
