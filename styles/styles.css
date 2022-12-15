@@ -249,11 +249,14 @@ form .flex textarea{
     margin-bottom: 24px;
 }
 form button{
-    /*306px is the width of textarea, and label is 174px; whole width: 950px; form is in the center; 
-    950px - (306+174) = 470, 470/2 = 235px, so 235+174 = 409px; 
-    in inspect mode, textarea has additional padding of 2 => add 2 on the width*/
-    width: 302px;
-    margin-left: 411px; /*refer to the calc afew lines above*/
+    /*button is a flex item, and current width is 300 
+    and since 174px (label) + 306px (length of textarea) 
+    + 4px (2px padding on both sides of text area) = 480px, 
+    then just add a margin
+    of 178px to button: 180 + 300 = 480px. 
+    */
+    width: 300px;
+    margin-left: 174px; /*refer to the calc a few lines above*/
     line-height: 24px;
     font-size: 16px;
     border:solid #000000 1px;
