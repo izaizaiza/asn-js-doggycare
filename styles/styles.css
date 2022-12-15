@@ -76,7 +76,6 @@ main a:hover, footer a:hover{
 
 
 
-
 /************* header/footer styling *************/
 
 /* TO DO:
@@ -199,6 +198,7 @@ footer {
     padding: 20px 0px; /*added to make buttons big enough for the text*/
 }
 
+/*only the change in colors, assuming that everything else stay the same*/
 .clicked{
     background-color: #E5AF42;
 }
