@@ -32,14 +32,23 @@ function resetDayButns(){
     wednesdayButn.classList.remove("clicked");
     thursdayButn.classList.remove("clicked");
     fridayButn.classList.remove("clicked");
+    numOfDays=0;
 }
 function applyClicked(butn){
     butn.classList.add("clicked");
 }
 
 function resetAndApplyClicked(butn){
-    resetDayButns();
-    applyClicked(butn);
+    if (numOfDays<2){
+        if (butn.classList.contains("clicked")){
+        }else{
+            applyClicked(butn);
+            numOfDays +=1;
+            calculate(costPerDay);
+        }
+    }else{
+        resetDayButns();
+    }    
 }
 
 //make function that uses the two functions for ANY day button
@@ -66,7 +75,6 @@ function onClearDays(){
     calculatedCost.innerHTML = 0;
     halfButn.classList.remove("clicked");
     applyClicked(fullButn);
-    //fullButn.classList.add("clicked");
 }
 clearButn.onclick = onClearDays;
 
@@ -74,9 +82,9 @@ clearButn.onclick = onClearDays;
 /********* change rate *********/
 // when the half-day button is clicked, set the daily rate to $20, add the "clicked" class to the "half" element, remove it from the "full" element, and recalculate the total cost.
 function onHalfDay(){
-    costPerDay = 20;
     fullButn.classList.remove("clicked");
     applyClicked(halfButn);
+    costPerDay = 20;
     calculate(costPerDay);
 }
 
@@ -84,9 +92,9 @@ function onHalfDay(){
 
 // when the full-day button is clicked, the daily rate is set back to $35, the clicked class is added to "full" and removed from "half", and the total cost is recalculated.
 function onFullDay(){
-    costPerDay = 35;
     halfButn.classList.remove("clicked");
     applyClicked(fullButn);
+    costPerDay = 35;
     calculate(costPerDay);
 }
 
@@ -97,6 +105,6 @@ fullButn.onclick = onFullDay;
 /********* calculate *********/
 // when a calculation is needed, set the innerHTML of the calculated-cost element to the appropriate value
 function calculate(costPerDay){
-    calculatedCost.innerHTML = costPerDay;
+    calculatedCost.innerHTML = costPerDay*numOfDays;
 }
 
