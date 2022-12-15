@@ -48,43 +48,13 @@ function clickThisDay(event){
     //const dayButn = event.target;
     resetAndApplyClicked(event.target);
 }
-//use the two functions to each button:
-/*function onMondayButn(e){
-    e.preventDefault();
-    resetAndApplyClicked(wednesdayButn);
-    //console.log("mon clicked")
-}
-function onTuesdayButn(e){
-    e.preventDefault();
-    resetAndApplyClicked(tuesdayButn);
-}
-function onWednesdayButn(e){
-    e.preventDefault();
-    resetAndApplyClicked(wednesdayButn);
-}
-function onThursdayButn(e){
-    e.preventDefault();
 
-    resetAndApplyClicked(thursdayButn);
-}
-function onFridayButn(e){
-    e.preventDefault();
-    resetAndApplyClicked(fridayButn);
-}
-*/
 // apply the functions on each button when user clicks it
 mondayButn.onclick = clickThisDay;
 tuesdayButn.onclick = clickThisDay;
 wednesdayButn.onclick = clickThisDay;
 thursdayButn.onclick = clickThisDay;
 fridayButn.onclick = clickThisDay;
-
-//mondayButn.onclick = onMondayButn;
-//tuesdayButn.onclick = onTuesdayButn;
-//wednesdayButn.onclick = onWednesdayButn;
-//thursdayButn.onclick = onThursdayButn;
-//fridayButn.onclick = onFridayButn;
-
 
 /********* clear days *********/
 // when the clear-button is clicked, the "clicked" class is removed from all days, any other relevant variables are reset, and the calculated cost is set to 0.
@@ -120,10 +90,6 @@ function onFullDay(){
 
 halfButn.onclick = onHalfDay;
 fullButn.onclick = onFullDay;
-
-
-
-
 
 /********* calculate *********/
 // when a calculation is needed, set the innerHTML of the calculated-cost element to the appropriate value
