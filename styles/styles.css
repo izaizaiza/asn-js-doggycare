@@ -107,13 +107,16 @@ header a h1{
     padding-left: 108.15px;
 }
 main {
-    margin-top: 25px;
-    margin-bottom: 50px;
+    margin-top: 25px; /*not in instructions but w/o it; footer is not similar to screenshot*/
+    margin-bottom: 50px; /*not in instructions but w/o it; footer is not similar to screenshot*/
 }
 footer {
+    padding-top:25px;
+    padding-bottom: 25px;
     background-color: #E5AF42;
     height:60px;
-    font-weight:200px;
+    vertical-align: middle;
+    font-weight:200;
     text-align: center;
 }
 
